@@ -14,9 +14,16 @@ type Status struct {
 	Clock   int64  `json:"clock,omitempty"`
 	Config  struct {
 		Settings struct {
-			AllowTcpFallbackRelay bool `json:"allowTcpFallbackRelay,omitempty"`
-			PortMappingEnabled    bool `json:"portMappingEnabled,omitempty"`
-			PrimaryPort           uint `json:"primaryPort,omitempty"`
+			Bind                  []string `json:"bind,omitempty"`
+			AllowTcpFallbackRelay bool     `json:"allowTcpFallbackRelay,omitempty"`
+			PortMappingEnabled    bool     `json:"portMappingEnabled,omitempty"`
+			PrimaryPort           uint     `json:"primaryPort,omitempty"`
+			SecondaryPort         uint     `json:"secondaryPort"`
+			tertiaryPort          uint     `json:"tertiaryPort,omitempty"`
+			ListeningOn           []string `json:"listeningOn,omitempty"`
+			SoftwareUpdate        string   `json:"softwareUpdate,omitempty"`
+			SoftwareUpdateChannel string   `json:"softwareUpdateChannel,omitempty"`
+			SurfaceAddresses      []string `json:"surfaceAddresses,omitempty"`
 		} `json:"settings,omitempty"`
 	} `json:"config,omitempty"`
 	Online               bool   `json:"online,omitempty"`
