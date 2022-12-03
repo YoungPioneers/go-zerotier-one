@@ -10,25 +10,25 @@ import (
 
 // Status .
 type Status struct {
-	Address string `json:"address"`
-	Clock   int64  `json:"clock"`
+	Address string `json:"address,omitempty"`
+	Clock   int64  `json:"clock,omitempty"`
 	Config  struct {
 		Settings struct {
-			AllowTcpFallbackRelay bool `json:"allowTcpFallbackRelay"`
-			PortMappingEnabled    bool `json:"portMappingEnabled"`
-			PrimaryPort           uint `json:"primaryPort"`
-		} `json:"settings"`
-	} `json:"config"`
-	Online               bool   `json:"online"`
-	PlanetWorldId        int64  `json:"planetWorldId"`
-	PlanetWorldTimestamp int64  `json:"planetWorldTimestamp"`
-	PublicIdentity       string `json:"publicIdentity"`
-	TCPFallbackActive    bool   `json:"tcpFallbackActive"`
-	Version              string `json:"version"`
-	VersionBuild         uint   `json:"versionBuild"`
-	VersionMajor         uint   `json:"versionMajor"`
-	VersionMinor         uint   `json:"versionMinor"`
-	VersionRev           uint   `json:"versionRev"`
+			AllowTcpFallbackRelay bool `json:"allowTcpFallbackRelay,omitempty"`
+			PortMappingEnabled    bool `json:"portMappingEnabled,omitempty"`
+			PrimaryPort           uint `json:"primaryPort,omitempty"`
+		} `json:"settings,omitempty"`
+	} `json:"config,omitempty"`
+	Online               bool   `json:"online,omitempty"`
+	PlanetWorldId        int64  `json:"planetWorldId,omitempty"`
+	PlanetWorldTimestamp int64  `json:"planetWorldTimestamp,omitempty"`
+	PublicIdentity       string `json:"publicIdentity,omitempty"`
+	TCPFallbackActive    bool   `json:"tcpFallbackActive,omitempty"`
+	Version              string `json:"version,omitempty"`
+	VersionBuild         uint   `json:"versionBuild,omitempty"`
+	VersionMajor         uint   `json:"versionMajor,omitempty"`
+	VersionMinor         uint   `json:"versionMinor,omitempty"`
+	VersionRev           uint   `json:"versionRev,omitempty"`
 }
 
 // Status GET /status
