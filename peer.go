@@ -18,7 +18,7 @@ type Peer struct {
 	} `json:"paths"`
 	Role         string `json:"role"`
 	Version      string `json:"version"`
-	VersionMajor uint   `json:"versionMajor"`
-	VersionMinor uint   `json:"versionMinor"`
-	VersionRev   uint   `json:"versionRev"`
+	VersionMajor int    `json:"versionMajor"`
+	VersionMinor int    `json:"versionMinor"`
+	VersionRev   int    `json:"versionRev"`
 }
